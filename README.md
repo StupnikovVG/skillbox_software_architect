@@ -4,5 +4,7 @@
 
 [2. Функциональные требования](02_Functional_requirements/02_functional_requirements.md)
 
+[3. Стейкхолдеры](03_Stakeholders/03_stakeholders.md)
+
 
 
