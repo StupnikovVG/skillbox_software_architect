@@ -1,5 +1,61 @@
 @startuml
 
-    person "User" as User
+    skinparam ComponentStyle rectangle
+    'top to bottom direction
+    left to right direction
+    skinparam linetype ortho
+
+    person "User" as User1
+    person "User" as User2
+    person "User" as User3
+
+    rectangle "API-Gateway" as UsersAPI #LightGoldenRodYellow
+    rectangle "API-Gateway" as AppAPI #LightGoldenRodYellow
+    collections "Current system" as CurSys 
+
+    rectangle "System" as system {
+
+       rectangle "Тренировки" as trains 
+        rectangle "Интеграция со\nсторонними устройствами" as outTools
+        rectangle "Пользователи" as users 
+        rectangle "Магазин" as store 
+        queue "          Логи          " as logs #LightBlue
+        rectangle "Мониторинг" as monitoring
+        rectangle "Социальные функции" as userGroups    
+        rectangle "Работа с инвентарем" as tools          
+        rectangle "Новости и промоакции" as news   
+
+        UsersAPI --> users
+        UsersAPI --> store
+        UsersAPI --> trains
+        UsersAPI --> userGroups
+        UsersAPI --> tools
+        UsersAPI --> news
+        UsersAPI --> outTools
+
+
+        users --> logs
+        users --> monitoring
+        store --> logs
+        store --> monitoring
+        trains --> logs
+        trains --> monitoring
+        userGroups --> logs
+        userGroups --> monitoring
+        tools --> logs
+        tools --> monitoring
+        news --> logs
+        news --> monitoring
+        outTools --> logs
+        outTools --> monitoring
+
+    }
+
+    User1 --> UsersAPI
+    User2 --> UsersAPI
+    User3 --> UsersAPI
+
+    system -d-> AppAPI
+    AppAPI -d-> CurSys
 
 @enduml
