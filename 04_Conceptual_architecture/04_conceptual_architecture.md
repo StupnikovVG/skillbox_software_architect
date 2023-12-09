@@ -4,4 +4,4 @@
 
 <!--![Diagram Image Link](conceptual_architecture.puml)-->
 
-[arc](../out/04_Conceptual_architecture/conceptual_architecture/conceptual_architecture.svg.)
+[arc](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuNBAJrBGjLDmpCbCJbMmKiX8pSd9vt98pKi1IW80)
