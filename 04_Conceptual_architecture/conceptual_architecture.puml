@@ -1,0 +1,5 @@
+@startuml
+
+    person "User" as User
+
+@enduml
