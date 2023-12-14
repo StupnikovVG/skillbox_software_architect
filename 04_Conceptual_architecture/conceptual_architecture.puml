@@ -9,6 +9,8 @@
     person "User" as User2
     person "User" as User3
 
+    rectangle "Приложение" as app
+
     rectangle "API-Gateway" as UsersAPI #LightGoldenRodYellow
     rectangle "API-Gateway" as AppAPI #LightGoldenRodYellow
     collections "Current system" as CurSys 
@@ -51,9 +53,10 @@
 
     }
 
-    User1 --> UsersAPI
-    User2 --> UsersAPI
-    User3 --> UsersAPI
+    User1 --> app
+    User2 --> app
+    User3 --> app
+    app --> UsersAPI
 
     system -d-> AppAPI
     AppAPI -d-> CurSys
