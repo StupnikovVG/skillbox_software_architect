@@ -11,3 +11,5 @@
 [5. Риски реализации](05_Risks/05_risks.md)
 
 [6. План разработки](06_plan/06_plan.md)
+
+[7. Критичные бизнес-сценарии](07_Critical_business_scenarios/07_critical_business_scenarios.md)
