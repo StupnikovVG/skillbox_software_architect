@@ -17,3 +17,5 @@
 [8. Атрибуты качества](08_Quality_attributes/08_quality_attributes.md)
 
 [9. Нефункциональные требования](09_Nonfunctional_requirements/09_nonfunctional_requirements.md)
+
+[10. Архитектурные опции](10_Architecture_options/10_architecture_options.md)
