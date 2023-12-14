@@ -8,3 +8,5 @@
 
 [4. Концептуальная архитектура](04_Conceptual_architecture/04_conceptual_architecture.md)
 
+[5. Риски реализации](05_Risks/05_risks.md)
+
