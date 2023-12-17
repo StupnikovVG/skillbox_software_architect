@@ -22,3 +22,5 @@
 
 [11. ADR](11_ADR/11_ADR.md)
 
+[12. Пользовательские сценарии](12_user_stories/12_user_stories.md)
+
