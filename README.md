@@ -24,3 +24,4 @@
 
 [12. Пользовательские сценарии](12_user_stories/12_user_stories.md)
 
+[13. Базовая архитектура](13_Base_architecture/13_base_architecture.md)
