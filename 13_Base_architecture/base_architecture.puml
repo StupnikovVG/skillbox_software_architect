@@ -1,0 +1,72 @@
+@startuml
+
+    skinparam ComponentStyle rectangle
+    top to bottom direction
+    'left to right direction
+    skinparam linetype ortho
+
+    person "User" as User1
+    person "User" as User2
+    person "User" as User3
+
+    rectangle "Приложение" as app
+
+    rectangle "API-Gateway" as UsersAPI #LightGoldenRodYellow
+    rectangle "API-Gateway" as AppAPI #LightGoldenRodYellow
+    collections "Current system" as CurSys 
+
+    rectangle "System" as system {
+
+        rectangle "Тренировки" as trains {
+            rectangle "Параметры\nтренировок" as trainsparams    
+            rectangle "Результаты\nтренировок" as trainsresult    
+            queue "Логи" as trainslogs #LightBlue
+
+            trainsparams --> trainslogs
+            trainsresult --> trainslogs
+
+        }
+        rectangle "Интеграция со\nсторонними устройствами" as outTools
+        rectangle "Пользователи" as users 
+        rectangle "Магазин" as store 
+        queue "          Логи          " as logs #LightBlue
+        rectangle "Мониторинг" as monitoring
+        rectangle "Социальные функции" as userGroups    
+        rectangle "Работа с инвентарем" as tools          
+        rectangle "Новости и промоакции" as news   
+
+        UsersAPI --> users
+        UsersAPI --> store
+        UsersAPI --> trains
+        UsersAPI --> userGroups
+        UsersAPI --> tools
+        UsersAPI --> news
+        UsersAPI --> outTools
+
+
+        users --> logs
+        users --> monitoring
+        store --> logs
+        store --> monitoring
+        trainslogs --> logs
+        trains --> monitoring
+        userGroups --> logs
+        userGroups --> monitoring
+        tools --> logs
+        tools --> monitoring
+        news --> logs
+        news --> monitoring
+        outTools --> logs
+        outTools --> monitoring
+
+    }
+
+    User1 --> app
+    User2 --> app
+    User3 --> app
+    app --> UsersAPI
+
+    system -d-> AppAPI
+    AppAPI -d-> CurSys
+
+@enduml
